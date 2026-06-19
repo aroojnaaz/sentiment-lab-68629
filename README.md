@@ -1,121 +1,119 @@
-README.md (Rewritten Version)
-Legal Notice Classification System
+📄 README.md (LAB SUBMISSION VERSION)
+🧠 Legal Notice Classification, Sentiment Lab 68629
+🚀 Project Description
 
-Sentiment Lab 68299
-
-Project Overview
-
-This project is a multi-class text classification system designed to automatically categorize legal notices into predefined legal categories. It is built as a prototype for a legal-tech environment where fast document understanding is required.
-
-The system compares traditional NLP approaches using:
-
-Logistic Regression
-Naive Bayes
-
-with two feature extraction methods:
-
-Bag of Words (BoW)
-TF-IDF Vectorization
-
-The goal is to evaluate performance trade-offs between accuracy and computational efficiency.
-
-Problem Statement
-
-Legal documents are often lengthy and time-consuming to analyze manually. This project solves this problem by automatically classifying short legal notices into:
+This project is a multi-class text classification system developed to categorize legal notices into three classes:
 
 Contract Dispute
 Intellectual Property Claim
 Regulatory Compliance
-Installation & Setup
 
-Follow the steps below to run the project locally:
+The system is built using traditional NLP and machine learning techniques and compares the performance of:
 
+Logistic Regression
+Naive Bayes
+
+with two feature representations:
+
+Bag of Words (BoW)
+TF-IDF
+
+The objective is to evaluate model performance on structured legal text data.
+
+📊 Dataset Information
+
+The dataset contains the following columns:
+
+id
+category
+label (target class)
+notice (raw legal text)
+Class Distribution:
+Contract Dispute
+Intellectual Property Claim
+Regulatory Compliance
+⚙️ Setup Instructions
 1. Clone Repository
-git clone https://github.com/javeriakhalid15/sentiment-lab-68299.git
+git clone https://github.com/aroojnaaz/sentiment-lab-68629.git
 2. Create Virtual Environment
 python -m venv venv
 
-Activate environment (Windows):
+Activate (Windows):
 
 venv\Scripts\activate
 3. Install Dependencies
 pip install -r requirements.txt
 4. Run Notebook
 
-Open the file:
+Open:
 
 notebooks/sentiment_analysis.ipynb
 
-Then:
+Run all cells sequentially.
 
-Select the virtual environment kernel
-Run all cells sequentially from top to bottom
-Configuration (config.json)
+⚙️ Configuration (config.json)
 
-All model parameters are externalized in config.json to avoid hardcoding.
+All hyperparameters are stored in config.json:
 
-It includes:
-
-Random seed for reproducibility
-Train-test split ratio (e.g., 0.2)
-Maximum vocabulary size (e.g., 5000)
-Model hyperparameters for:
+Random seed = 42
+Test size = 0.2
+Max features = 5000
+Model parameters for:
 Logistic Regression
 Naive Bayes
 
-This ensures modularity and easy tuning.
+This ensures reproducibility and modular design.
 
-Methodology
-Text Preprocessing
+🧪 Methodology
+1. Preprocessing
 Lowercasing text
-Cleaning raw legal notices
-Preparing structured input for vectorization
-Feature Engineering
+Cleaning raw notices
+Removing noise
+2. Feature Extraction
+Bag of Words (BoW)
+Word frequency based representation
+TF-IDF
+Weighted importance of words
+3. Models Used
+Logistic Regression
+Multinomial Naive Bayes
+📊 Results Summary (FROM YOUR LAB)
+Model	Features	Accuracy	F1 Score
+Naive Bayes	BoW	1.0	1.0
+Naive Bayes	TF-IDF	1.0	1.0
+Logistic Regression	BoW	1.0	1.0
+Logistic Regression	TF-IDF	1.0	1.0
+📌 Observations
+Both models achieved high performance due to strong vocabulary separation
+TF-IDF slightly improves interpretability
+Naive Bayes is faster in training and inference
+Logistic Regression provides stable classification
+🧾 MLflow Experiment Tracking
 
-Two approaches were used:
+MLflow was used to:
 
-Bag of Words (BoW) → word frequency representation
-TF-IDF → weighted importance of words
-Machine Learning Models
+Track multiple runs
+Log accuracy and F1-score
+Compare model performance
 
-Two classifiers were trained:
+At least 6 runs were logged successfully.
 
-Logistic Regression (linear model, strong with TF-IDF)
-Multinomial Naive Bayes (efficient probabilistic model for text)
-Results Overview
-Model	Feature Type	Accuracy	F1 Score	Training Time
-Naive Bayes	BoW	1.00	1.00	Very Fast
-Naive Bayes	TF-IDF	1.00	1.00	Very Fast
-Logistic Regression	BoW	1.00	1.00	Fast
-Logistic Regression	TF-IDF	1.00	1.00	Moderate
-Key Insights
-Dataset contains highly distinguishable vocabulary across classes
-Both models achieve strong performance due to clear separability
-Naive Bayes is more computationally efficient
-Logistic Regression provides stable performance with TF-IDF
-Experiment Tracking
-
-MLflow was used to track experiments including:
-
-Accuracy per run
-F1-score per configuration
-Multiple training runs for comparison
-
-This ensures reproducibility and structured model evaluation.
-
-Limitations
+⚠️ Limitations
 Small dataset size
-No deep learning models used
-Limited real-world noise in data
-Future Improvements
-Integration of transformer-based models (BERT, RoBERTa)
-Deployment as a web API
-Larger and more diverse dataset
-Hyperparameter optimization (Grid/Random search)
-Author Note
+No deep learning models
+Limited real-world noise
+🚀 Future Improvements
+Transformer-based models (BERT)
+Larger dataset
+Hyperparameter tuning
+Deployment as API
+👩‍💻 Author
 
-This project was developed as part of a machine learning lab assignment focusing on text classification, NLP preprocessing, and experiment tracking using MLflow.
+This project was completed as part of a Machine Learning Lab assignment.
 
-Conclusion
+GitHub Repository:
+👉 https://github.com/aroojnaaz/sentiment-lab-68629
 
-The system successfully demonstrates how traditional machine learning techniques can effectively classify legal documents with high accuracy when trained on clean and structured data.
+📌 Conclusion
+
+This project demonstrates effective classification of legal notices using traditional NLP techniques and machine learning models, achieving strong performance on structured data.
