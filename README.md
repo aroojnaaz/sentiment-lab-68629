@@ -1,120 +1,121 @@
-🧠 LEGAL NOTICE CLASSIFICATION SYSTEM
-SENTIMENT LAB 68629
-<br>
-🚀 PROJECT DESCRIPTION
+# 🧠 LEGAL NOTICE CLASSIFICATION SYSTEM  
+# SENTIMENT LAB 68629  
+
+# 🚀 PROJECT DESCRIPTION  
 
 This project is a multi-class text classification system designed to categorize legal notices into three classes:
 
-Contract Dispute
-Intellectual Property Claim
-Regulatory Compliance
+- Contract Dispute  
+- Intellectual Property Claim  
+- Regulatory Compliance  
 
 It compares two machine learning models:
 
-Logistic Regression
-Naive Bayes
+- Logistic Regression  
+- Naive Bayes  
 
-with two feature extraction methods:
+Feature extraction methods:
 
-Bag of Words (BoW)
-TF-IDF
-<br>
-📊 DATASET INFORMATION
+- Bag of Words (BoW)  
+- TF-IDF  
+
+# 📊 DATASET INFORMATION  
 
 The dataset contains:
 
-id
-category
-label (target class)
-notice (raw legal text)
+- id  
+- category  
+- label (target class)  
+- notice (raw legal text)  
 
 Classes:
 
-Contract Dispute
-Intellectual Property Claim
-Regulatory Compliance
-<br>
-⚙️ SETUP INSTRUCTIONS
-1. CLONE REPOSITORY
-git clone https://github.com/aroojnaaz/sentiment-lab-68629.git
-2. CREATE VIRTUAL ENVIRONMENT
-python -m venv venv
+- Contract Dispute  
+- Intellectual Property Claim  
+- Regulatory Compliance  
 
-Activate:
+# ⚙️ SETUP INSTRUCTIONS  
 
-venv\Scripts\activate
-3. INSTALL DEPENDENCIES
-pip install -r requirements.txt
-4. RUN NOTEBOOK
+## 1. CLONE REPOSITORY  
 
-Open:
+git clone https://github.com/aroojnaaz/sentiment-lab-68629.git  
 
-notebooks/sentiment_analysis.ipynb
+## 2. CREATE VIRTUAL ENVIRONMENT  
 
-Run all cells from top to bottom.
+python -m venv venv  
+venv\Scripts\activate  
 
-<br>
-⚙️ CONFIGURATION (config.json)
+## 3. INSTALL DEPENDENCIES  
 
-This file contains all hyperparameters:
+pip install -r requirements.txt  
 
-Random seed = 42
-Test size = 0.2
-Max features = 5000
-Model parameters (LR & NB)
-<br>
-🧪 METHODOLOGY
-TEXT PREPROCESSING
-Lowercasing text
-Cleaning raw legal notices
-FEATURE ENGINEERING
-Bag of Words (BoW)
+## 4. RUN NOTEBOOK  
 
-Word frequency based representation
+notebooks/sentiment_analysis.ipynb  
 
-TF-IDF
+Run all cells from top to bottom  
 
-Weighted importance of words
+# ⚙️ CONFIGURATION (config.json)  
 
-MACHINE LEARNING MODELS
-Logistic Regression
-Multinomial Naive Bayes
-<br>
-📊 RESULTS SUMMARY
-Model	Feature	Accuracy	F1 Score
-Naive Bayes	BoW	1.0	1.0
-Naive Bayes	TF-IDF	1.0	1.0
-Logistic Regression	BoW	1.0	1.0
-Logistic Regression	TF-IDF	1.0	1.0
-<br>
-📌 KEY INSIGHTS
-Dataset has strong separable vocabulary
-Both models perform equally well
-Naive Bayes is faster
-Logistic Regression is more stable
-<br>
-🧾 MLFLOW EXPERIMENT TRACKING
-Multiple runs executed (6+)
-Accuracy and F1-score logged
-Model comparison performed
-<br>
-⚠️ LIMITATIONS
-Small dataset
-No deep learning models
-Limited noise variation
-<br>
-🚀 FUTURE IMPROVEMENTS
-BERT / Transformer models
-Larger dataset
-Hyperparameter tuning
-API deployment
-<br>
-👩‍💻 AUTHOR
+Random seed = 42  
+Test size = 0.2  
+Max features = 5000  
+Model parameters for Logistic Regression and Naive Bayes  
 
-Machine Learning Lab Project
-GitHub: https://github.com/aroojnaaz/sentiment-lab-68629
+# 🧪 METHODOLOGY  
 
-<br>
-📌 CONCLUSION
+TEXT PREPROCESSING  
+- Lowercasing  
+- Cleaning text  
 
-This project demonstrates effective legal text classification using traditional machine learning techniques with high accuracy on structured data.
+FEATURE ENGINEERING  
+
+Bag of Words (BoW)  
+TF-IDF  
+
+MODELS USED  
+- Logistic Regression  
+- Naive Bayes  
+
+# 📊 RESULTS SUMMARY  
+
+Naive Bayes (BoW) → Accuracy 1.0, F1 1.0  
+Naive Bayes (TF-IDF) → Accuracy 1.0, F1 1.0  
+Logistic Regression (BoW) → Accuracy 1.0, F1 1.0  
+Logistic Regression (TF-IDF) → Accuracy 1.0, F1 1.0  
+
+# 📌 KEY INSIGHTS  
+
+Dataset is highly separable  
+Both models perform equally well  
+Naive Bayes is faster  
+Logistic Regression is more stable  
+
+# 🧾 MLFLOW TRACKING  
+
+Multiple runs executed (6+)  
+Accuracy logged  
+F1-score logged  
+Model comparison performed  
+
+# ⚠️ LIMITATIONS  
+
+Small dataset  
+No deep learning models  
+Limited noise variation  
+
+# 🚀 FUTURE IMPROVEMENTS  
+
+BERT / Transformer models  
+Larger dataset  
+Hyperparameter tuning  
+API deployment  
+
+# 👩‍💻 AUTHOR  
+
+Machine Learning Lab Project  
+GitHub: https://github.com/aroojnaaz/sentiment-lab-68629  
+
+# 📌 CONCLUSION  
+
+This project demonstrates a complete machine learning pipeline for legal text classification using traditional NLP techniques. Logistic Regression and Naive Bayes both achieve high accuracy due to strong separability in dataset.
