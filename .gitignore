@@ -2,17 +2,19 @@
 __pycache__/
 *.pyc
 
-# Virtual environment
-venv/
-
-# Jupyter checkpoints
+# Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
-# MLflow runs
+# Virtual environment
+venv/
+env/
+
+# ML / logs
 mlruns/
+*.log
 
 # OS files
 .DS_Store
 
-# env file
-.env
+# VS Code
+.vscode/
