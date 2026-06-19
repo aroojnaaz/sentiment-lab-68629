@@ -1,119 +1,120 @@
-📄 README.md (LAB SUBMISSION VERSION)
-🧠 Legal Notice Classification, Sentiment Lab 68629
-🚀 Project Description
+🧠 LEGAL NOTICE CLASSIFICATION SYSTEM
+SENTIMENT LAB 68629
+<br>
+🚀 PROJECT DESCRIPTION
 
-This project is a multi-class text classification system developed to categorize legal notices into three classes:
+This project is a multi-class text classification system designed to categorize legal notices into three classes:
 
 Contract Dispute
 Intellectual Property Claim
 Regulatory Compliance
 
-The system is built using traditional NLP and machine learning techniques and compares the performance of:
+It compares two machine learning models:
 
 Logistic Regression
 Naive Bayes
 
-with two feature representations:
+with two feature extraction methods:
 
 Bag of Words (BoW)
 TF-IDF
+<br>
+📊 DATASET INFORMATION
 
-The objective is to evaluate model performance on structured legal text data.
-
-📊 Dataset Information
-
-The dataset contains the following columns:
+The dataset contains:
 
 id
 category
 label (target class)
 notice (raw legal text)
-Class Distribution:
+
+Classes:
+
 Contract Dispute
 Intellectual Property Claim
 Regulatory Compliance
-⚙️ Setup Instructions
-1. Clone Repository
+<br>
+⚙️ SETUP INSTRUCTIONS
+1. CLONE REPOSITORY
 git clone https://github.com/aroojnaaz/sentiment-lab-68629.git
-2. Create Virtual Environment
+2. CREATE VIRTUAL ENVIRONMENT
 python -m venv venv
 
-Activate (Windows):
+Activate:
 
 venv\Scripts\activate
-3. Install Dependencies
+3. INSTALL DEPENDENCIES
 pip install -r requirements.txt
-4. Run Notebook
+4. RUN NOTEBOOK
 
 Open:
 
 notebooks/sentiment_analysis.ipynb
 
-Run all cells sequentially.
+Run all cells from top to bottom.
 
-⚙️ Configuration (config.json)
+<br>
+⚙️ CONFIGURATION (config.json)
 
-All hyperparameters are stored in config.json:
+This file contains all hyperparameters:
 
 Random seed = 42
 Test size = 0.2
 Max features = 5000
-Model parameters for:
-Logistic Regression
-Naive Bayes
-
-This ensures reproducibility and modular design.
-
-🧪 Methodology
-1. Preprocessing
+Model parameters (LR & NB)
+<br>
+🧪 METHODOLOGY
+TEXT PREPROCESSING
 Lowercasing text
-Cleaning raw notices
-Removing noise
-2. Feature Extraction
+Cleaning raw legal notices
+FEATURE ENGINEERING
 Bag of Words (BoW)
+
 Word frequency based representation
+
 TF-IDF
+
 Weighted importance of words
-3. Models Used
+
+MACHINE LEARNING MODELS
 Logistic Regression
 Multinomial Naive Bayes
-📊 Results Summary (FROM YOUR LAB)
-Model	Features	Accuracy	F1 Score
+<br>
+📊 RESULTS SUMMARY
+Model	Feature	Accuracy	F1 Score
 Naive Bayes	BoW	1.0	1.0
 Naive Bayes	TF-IDF	1.0	1.0
 Logistic Regression	BoW	1.0	1.0
 Logistic Regression	TF-IDF	1.0	1.0
-📌 Observations
-Both models achieved high performance due to strong vocabulary separation
-TF-IDF slightly improves interpretability
-Naive Bayes is faster in training and inference
-Logistic Regression provides stable classification
-🧾 MLflow Experiment Tracking
-
-MLflow was used to:
-
-Track multiple runs
-Log accuracy and F1-score
-Compare model performance
-
-At least 6 runs were logged successfully.
-
-⚠️ Limitations
-Small dataset size
+<br>
+📌 KEY INSIGHTS
+Dataset has strong separable vocabulary
+Both models perform equally well
+Naive Bayes is faster
+Logistic Regression is more stable
+<br>
+🧾 MLFLOW EXPERIMENT TRACKING
+Multiple runs executed (6+)
+Accuracy and F1-score logged
+Model comparison performed
+<br>
+⚠️ LIMITATIONS
+Small dataset
 No deep learning models
-Limited real-world noise
-🚀 Future Improvements
-Transformer-based models (BERT)
+Limited noise variation
+<br>
+🚀 FUTURE IMPROVEMENTS
+BERT / Transformer models
 Larger dataset
 Hyperparameter tuning
-Deployment as API
-👩‍💻 Author
+API deployment
+<br>
+👩‍💻 AUTHOR
 
-This project was completed as part of a Machine Learning Lab assignment.
+Machine Learning Lab Project
+GitHub: https://github.com/aroojnaaz/sentiment-lab-68629
 
-GitHub Repository:
-👉 https://github.com/aroojnaaz/sentiment-lab-68629
+<br>
+📌 CONCLUSION
 
-📌 Conclusion
-
-This project demonstrates effective classification of legal notices using traditional NLP techniques and machine learning models, achieving strong performance on structured data.
+This project demonstrates effective legal text classification using traditional machine learning techniques with high accuracy on structured data.
